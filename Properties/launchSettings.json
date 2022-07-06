@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "cppsharp-sokol": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}
