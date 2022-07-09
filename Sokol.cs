@@ -12692,7 +12692,7 @@ namespace Sokol
             [SuppressUnmanagedCodeSecurity, DllImport("sokol-dll", EntryPoint = "sg_mtl_render_command_encoder", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern __IntPtr SgMtlRenderCommandEncoder();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("sokol-dll", EntryPoint = "?sg_setup@@YAXAEBUsg_desc@@@Z", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("sokol-dll", EntryPoint = "sg_setup", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void SgSetup(__IntPtr desc);
 
             [SuppressUnmanagedCodeSecurity, DllImport("sokol-dll", EntryPoint = "?sg_make_buffer@@YA?AUsg_buffer@@AEBUsg_buffer_desc@@@Z", CallingConvention = __CallingConvention.Cdecl)]

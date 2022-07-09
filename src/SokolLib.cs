@@ -7,13 +7,17 @@ public class SokolLib : ILibrary
     /// Setup the driver options here.
     public void Setup(Driver driver)
     {
+        Console.WriteLine("setting up generator");
         var options = driver.Options;
         options.GeneratorKind = GeneratorKind.CSharp;
         var module = options.AddModule("Sokol");
-        module.IncludeDirs.Add(@"C:\Users\kyle\Workspace\fips-workspace\sokol");
+        // module.IncludeDirs.Add(@"C:\Users\kyle\Workspace\fips-workspace\sokol");
+        module.IncludeDirs.Add(@"\Users\kyle\Workspace\sokol-csharp\sokol_libs");
         module.Headers.Add("sokol_app.h");
         module.Headers.Add("sokol_gfx.h");
-        module.LibraryDirs.Add(@"C:\Users\kyle\Workspace\fips-workspace\fips-deploy\sokol-samples\sapp-win64-vscode-debug");
+        module.Headers.Add("sokol_glue.h");
+        // module.LibraryDirs.Add(@"C:\Users\kyle\Workspace\fips-workspace\fips-deploy\sokol-samples\sapp-win64-vscode-debug");
+        module.LibraryDirs.Add(@"\Users\kyle\Workspace\sokol-csharp");
         module.Libraries.Add("sokol-dll.dll");
     }
 
