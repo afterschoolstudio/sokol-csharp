@@ -1,0 +1,16 @@
+setup a fips workspace that
+- has sokol
+    - gfx
+    - app
+    - glue
+- has sokol gp
+
+builds all of it into dll
+- windows
+- osx
+- web?
+
+cppsharp generates bindings off of those (windows only)
+- why is mangling happening?
+
+sample projects use those bindings and dlls to show stuff on screen

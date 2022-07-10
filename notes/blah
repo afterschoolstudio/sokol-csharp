@@ -1,0 +1,6 @@
+ When using sokol_gfx.h and sokol_app.h together, consider using the
+    helper function sapp_sgcontext() in the sokol_glue.h header to
+    initialize the sg_desc.context nested struct. sapp_sgcontext() returns
+    a completely initialized sg_context_desc struct with information
+    provided by sokol_app.h.
+

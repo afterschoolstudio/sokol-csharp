@@ -12713,16 +12713,16 @@ namespace Sokol
             [SuppressUnmanagedCodeSecurity, DllImport("sokol-dll", EntryPoint = "?sg_update_image@@YAXUsg_image@@AEBUsg_image_data@@@Z", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void SgUpdateImage(global::Sokol.SgImage.__Internal img, __IntPtr data);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("sokol-dll", EntryPoint = "?sg_begin_default_pass@@YAXAEBUsg_pass_action@@HH@Z", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("sokol-dll", EntryPoint = "sg_begin_default_pass", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void SgBeginDefaultPass(__IntPtr pass_action, int width, int height);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("sokol-dll", EntryPoint = "?sg_begin_default_passf@@YAXAEBUsg_pass_action@@MM@Z", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("sokol-dll", EntryPoint = "sg_begin_default_passf", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void SgBeginDefaultPassf(__IntPtr pass_action, float width, float height);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("sokol-dll", EntryPoint = "?sg_begin_pass@@YAXUsg_pass@@AEBUsg_pass_action@@@Z", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("sokol-dll", EntryPoint = "sg_begin_pass", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void SgBeginPass(global::Sokol.SgPass.__Internal pass, __IntPtr pass_action);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("sokol-dll", EntryPoint = "?sg_apply_bindings@@YAXAEBUsg_bindings@@@Z", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("sokol-dll", EntryPoint = "sg_apply_bindings", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void SgApplyBindings(__IntPtr bindings);
 
             [SuppressUnmanagedCodeSecurity, DllImport("sokol-dll", EntryPoint = "?sg_apply_uniforms@@YAXW4sg_shader_stage@@HAEBUsg_range@@@Z", CallingConvention = __CallingConvention.Cdecl)]
