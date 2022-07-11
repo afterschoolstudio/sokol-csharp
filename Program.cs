@@ -50,15 +50,21 @@ void InitCallback()
         EndCanary = 0,
     });
 
-    passAction.Colors[0] = new Sokol.SgColorAttachmentAction(){
-        Action = Sokol.SgAction.SG_ACTION_DEFAULT,
-        Value = new Sokol.SgColor(){
-            R = 1.0f,
-            G = 0f,
-            B = 0f,
-            A = 1.0f,
-        }
+    passAction.Colors[0].Action = Sokol.SgAction.SG_ACTION_CLEAR;
+    passAction.Colors[0].Value = new Sokol.SgColor(){
+        R = 1.0f,
+        G = 0f,
+        B = 0f,
+        A = 1.0f,
     };
+    //     Action = Sokol.SgAction.SG_ACTION_CLEAR,
+    //     Value = new Sokol.SgColor(){
+    //         R = 1.0f,
+    //         G = 0f,
+    //         B = 0f,
+    //         A = 1.0f,
+    //     }
+    // };
 
 }
 
@@ -77,13 +83,15 @@ void CleanupCallback()
 void FrameCallback()
 {
     var g = passAction.Colors[0].Value.G + 0.1f;
-    // passAction.Colors[0].Value.G = g > 1.0f ? 0f : g;
-    passAction.Colors[0].Value = new Sokol.SgColor(){
-        R = 1.0f,
-        G = 0f,
-        B = 0f,
-        A = 1.0f,
-    };
+    passAction.Colors[0].Value.G = g > 1.0f ? 0f : g;
+    // passAction.Colors[0].Value = new Sokol.SgColor(){
+    //     R = 1.0f,
+    //     G = g,
+    //     B = 0f,
+    //     A = 1.0f,
+    // };
+    // passAction.Colors[0].Action = Sokol.SgAction.SG_ACTION_CLEAR;
+    // Sokol.sokol_gfx.SgBeginDefaultPass(passAction,Sokol.sokol_app.SappWidth(),Sokol.sokol_app.SappHeight());
     Sokol.sokol_gfx.SgBeginDefaultPass(passAction,Sokol.sokol_app.SappWidth(),Sokol.sokol_app.SappHeight());
     Sokol.sokol_gfx.SgEndPass();
     Sokol.sokol_gfx.SgCommit();
